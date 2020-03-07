@@ -11,6 +11,9 @@
     <body>
 
         <div class="container">
+
+            <a href="app/diagExt.php">Diagnosticos externos</a>
+            <!--
             <div class="row">
                 <div class="col-xs-12">
                     <div class="jumbotron">
@@ -21,11 +24,15 @@
             </div>
 
             <div class="text-center well">
-              <!--   -->
+               
             </div>
+            -->
         </div>
 
+
+<!--
         <script>
+        
             $(document).ready(function(){
                 $("#list").anexGrid({
                     class: 'table-striped table-bordered table-condensed table-hover',
@@ -66,8 +73,10 @@
                     columna_orden: 'ASC'
                 });
             })
-        </script>
 
+            
+        </script>
+-->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.anexgrid.js"></script>
     </body>
