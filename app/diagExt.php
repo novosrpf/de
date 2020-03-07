@@ -4,9 +4,9 @@
 		<title>Listado de diagnosticos externos</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="assets/css/estiloAzul.css" />
-        <script src="assets/js/jquery.js"></script>
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../assets/css/estiloAzul.css" />
+        <script src="../assets/js/jquery.js"></script>
     </head>
     <body>
 
@@ -21,7 +21,9 @@
             </div>
 
             <div class="text-center well">
-              <!--   -->
+              <footer>
+              <p>Rubén Palos Flores</p>
+              </footer>
             </div>
         </div>
 
@@ -58,7 +60,7 @@
                           });
                         }},
                     ],
-                    url: 'data.php',
+                    url: 'dataDiagExt.php',
                     paginable: true,
                     filtrable: true,
                     limite: [20, 60, 100],
@@ -68,7 +70,7 @@
             })
         </script>
 
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.anexgrid.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.anexgrid.js"></script>
     </body>
 </html>
