@@ -1,4 +1,5 @@
 <?php
+  require_once '../../utilerias/constantes.php';
   require_once '../anexgrid.php';
   try
   {
@@ -14,7 +15,7 @@
     }
 
     /* Nos conectamos a la base de datos */
-    $db = new PDO("mysql:dbname=de;host=localhost;charset=utf8", "root", "" );
+    $db = new PDO("mysql:dbname=".DB_NAME.";host=".DB_SERVER.";charset=utf8",DB_USERNAME,DB_PASSWORD);
 
     /* Nuestra consulta dinámica */
     $registros = $db->query("

@@ -1,5 +1,5 @@
 <?php
-  $mysqli = new mysqli("localhost","ruben", "ruben", "diagnosticos");
+  $mysqli = new mysqli("localhost","root", "", "de");
 
     if (mysqli_connect_errno()){
 
