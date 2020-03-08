@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Listado de diagnosticos externos</title>
+		<title>Listado de Dependencias/Entidades</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="lead">
-                        <h1>Listado de estatus</h1>
+                        <h1>Listado de Dependencias/Entidades</h1>
                     </div>
                     <div id="list"></div>
                 </div>
@@ -32,19 +32,19 @@
                 $("#list").anexGrid({
                     class: 'table-striped table-bordered table-condensed table-hover',
                     columnas: [
-                        { leyenda: 'Id',      style: 'width:30px;',  ordenable: true, filtro: false, columna: 'id'  },
-                        { leyenda: 'Estatus', style: 'width:100px;',  ordenable: true,  filtro: false, columna: 'estatus' },
+                        { leyenda: 'Id',      style: 'width:30px;',  ordenable: true, filtro: true, columna: 'idInterno'  },
+                        { leyenda: 'Siglas', style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'siglas' },
                        
                     ],
                     modelo: [
-                        { propiedad: 'id' },
-                        { propiedad: 'estatus' },
+                        { propiedad: 'idInterno' },
+                        { propiedad: 'siglas' },
                     ],
-                    url: 'dataEstatus.php',
+                    url: 'dataDependencias.php',
                     paginable: true,
                     filtrable: true,
                     limite: [20, 60, 100],
-                    columna: 'id, estatus',
+                    columna: 'id, siglas',
                     columna_orden: 'ASC'
                 });
             })
