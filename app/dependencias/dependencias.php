@@ -32,19 +32,25 @@
                 $("#list").anexGrid({
                     class: 'table-striped table-bordered table-condensed table-hover',
                     columnas: [
-                        { leyenda: 'Id',      style: 'width:30px;',  ordenable: true, filtro: true, columna: 'idInterno'  },
-                        { leyenda: 'Siglas', style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'siglas' },
-                       
+                        { leyenda: 'Id',        style: 'width:30px;',  ordenable: true, filtro: true, columna: 'idInterno'  },
+                        { leyenda: 'Siglas',    style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'siglas' },
+                        { leyenda: 'Dep/Ent',   style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'dependencia' },
+                        { leyenda: 'Correo',    style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'correo' },
+                        { leyenda: 'Encargado', style: 'width:100px;',  ordenable: true,  filtro: true, columna: 'encargado' },
+
                     ],
                     modelo: [
                         { propiedad: 'idInterno' },
                         { propiedad: 'siglas' },
+                        { propiedad: 'dependencia' },
+                        { propiedad: 'correo' },
+                        { propiedad: 'encargado' }
                     ],
                     url: 'dataDependencias.php',
                     paginable: true,
                     filtrable: true,
                     limite: [20, 60, 100],
-                    columna: 'id, siglas',
+                    columna: 'idInterno, siglas',
                     columna_orden: 'ASC'
                 });
             })
