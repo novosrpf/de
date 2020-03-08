@@ -32,7 +32,7 @@
                 $("#list").anexGrid({
                     class: 'table-striped table-bordered table-condensed table-hover',
                     columnas: [
-                        { leyenda: 'id',      style: 'width:30px;',  ordenable: true, filtro: false, columna: 'id'  },
+                        { leyenda: 'Id',      style: 'width:30px;',  ordenable: true, filtro: false, columna: 'id'  },
                         { leyenda: 'Estatus', style: 'width:100px;',  ordenable: true,  filtro: false, columna: 'estatus' },
                        
                     ],
