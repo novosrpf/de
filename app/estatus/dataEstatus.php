@@ -1,6 +1,6 @@
 <?php
   require_once '../../utilerias/constantes.php';
-  require_once '../anexgrid.php';
+  require_once '../../utilerias/anexgrid.php';
   try
   {
     $anexGrid = new AnexGrid();
