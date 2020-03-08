@@ -10,23 +10,25 @@
 
     foreach($anexGrid->filtros as $f)
     {
-        if($f['columna'] == 'id') $wh .= " AND id LIKE '%" . addslashes ($f['valor']) . "%'";
-        if($f['columna'] == 'estatus')  $wh .= " AND estatus  LIKE '%" . addslashes ($f['valor']) . "%'";
+        if($f['columna'] == 'numero') $wh .= " AND numero  LIKE '%" . addslashes ($f['valor']) . "%'";
+        if($f['columna'] == 'nombre') $wh .= " AND nombre  LIKE '%" . addslashes ($f['valor']) . "%'";
+        if($f['columna'] == 'cel')    $wh .= " AND cel     LIKE '%" . addslashes ($f['valor']) . "%'";
+        if($f['columna'] == 'correo') $wh .= " AND correo  LIKE '%" . addslashes ($f['valor']) . "%'";
     }
 
     /* Nos conectamos a la base de datos */
-    $db = new PDO("mysql:dbname=".DB_NAME.";host=".DB_SERVER.";charset=utf8",DB_USERNAME,DB_PASSWORD);
+    $db = new PDO("mysql:dbname=".DB_NAME.";host=".DB_SERVER.";charset=utf8", DB_USERNAME, DB_PASSWORD);
 
     /* Nuestra consulta dinámica */
     $registros = $db->query("
-        SELECT * FROM tblEstatus
+        SELECT * FROM tblProveedores
         WHERE $wh ORDER BY $anexGrid->columna $anexGrid->columna_orden
         LIMIT $anexGrid->pagina,$anexGrid->limite")->fetchAll(PDO::FETCH_ASSOC
      );
 
     $total = $db->query("
         SELECT COUNT(*) Total
-        FROM tblEstatus
+        FROM tblProveedores
         WHERE $wh
     ")->fetchObject()->Total;
 

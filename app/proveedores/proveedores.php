@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Listado de diagnosticos externos</title>
+		<title>Listado de proveedores</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="lead">
-                        <h1>Listado de estatus</h1>
+                        <h1>Listado de proveedores</h1>
                     </div>
                     <div id="list"></div>
                 </div>
@@ -32,19 +32,24 @@
                 $("#list").anexGrid({
                     class: 'table-striped table-bordered table-condensed table-hover',
                     columnas: [
-                        { leyenda: 'Id',      style: 'width:30px;',  ordenable: true, filtro: false, columna: 'id'  },
-                        { leyenda: 'Estatus', style: 'width:100px;',  ordenable: true,  filtro: false, columna: 'estatus' },
+                        { leyenda: 'Numero',  style: 'width:30px;',   ordenable: true, filtro: true, columna: 'id'  },
+                        { leyenda: 'Nombre',  style: 'width:100px;',  ordenable: true, filtro: true, columna: 'nombre' },
+                        { leyenda: 'Celular', style: 'width:100px;',  ordenable: true, filtro: true, columna: 'cel' },
+                        { leyenda: 'Correo',  style: 'width:100px;',  ordenable: true, filtro: true, columna: 'correo' },
                        
                     ],
                     modelo: [
-                        { propiedad: 'id' },
-                        { propiedad: 'estatus' },
+                        { propiedad: 'numero' },
+                        { propiedad: 'nombre' },
+                        { propiedad: 'cel' },
+                        { propiedad: 'correo' },
+
                     ],
-                    url: 'dataEstatus.php',
+                    url: 'dataProveedores.php',
                     paginable: true,
                     filtrable: true,
                     limite: [20, 60, 100],
-                    columna: 'id, estatus',
+                    columna: 'nombre',
                     columna_orden: 'ASC'
                 });
             })
