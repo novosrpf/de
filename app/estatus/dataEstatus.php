@@ -1,5 +1,5 @@
 <?php
-  require_once 'anexgrid.php';
+  require_once '../anexgrid.php';
   try
   {
     $anexGrid = new AnexGrid();
